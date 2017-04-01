@@ -5,6 +5,13 @@ VisualStudioVersion = 15.0.26228.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xBindTest", "xBindTest\xBindTest.csproj", "{767C2F8A-A7D7-4B01-AF3B-C3F69DC34016}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{A1DF6734-5E3D-4155-88CB-BD3EDD6EE365}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Screenshots", "Screenshots", "{AD96C111-59DB-4C71-896A-95BDCD112031}"
+	ProjectSection(SolutionItems) = preProject
+		Screenshots\xBindTest.png = Screenshots\xBindTest.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -36,5 +43,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AD96C111-59DB-4C71-896A-95BDCD112031} = {A1DF6734-5E3D-4155-88CB-BD3EDD6EE365}
 	EndGlobalSection
 EndGlobal
