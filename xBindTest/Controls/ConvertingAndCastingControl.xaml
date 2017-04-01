@@ -1,0 +1,31 @@
+﻿<UserControl
+    x:Class="xBindTest.Controls.ConvertingAndCastingControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:xBindTest.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    mc:Ignorable="d">
+    <StackPanel>
+        <Border
+            x:Name="border"
+            Width="80"
+            Height="80"
+            HorizontalAlignment="Left"
+            Background="{x:Bind GetBrush(IsPass), Mode=OneWay}">
+            <Image Margin="20" Source="{x:Bind GetImage(IsPass), Mode=OneWay}" />
+        </Border>
+        <ToggleSwitch
+            Margin="{StaticResource ContentMargin}"
+            IsOn="{x:Bind IsPass, Mode=TwoWay}"
+            OffContent="Fail"
+            OnContent="Pass" />
+
+        <TextBlock Margin="{StaticResource ContentMargin}">
+            <Run Text="Casting Double to Integer:" />
+            <Run Text="{x:Bind (x:Int32)Number}" />
+        </TextBlock>
+    </StackPanel>
+</UserControl>
