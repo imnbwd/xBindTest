@@ -23,6 +23,32 @@
         </DataTemplate>
     </UserControl.Resources>
     <Grid>
-        <ListView ItemTemplate="{StaticResource FriendItemTemplate}" ItemsSource="{x:Bind AllFriends}" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock>
+            <Run Text="DataTemplate in " />
+            <Run FontWeight="SemiBold" Text="UserControl.Resources" />
+        </TextBlock>
+        <TextBlock Grid.Column="1">
+            <Run Text="DataTemplate in " />
+            <Run FontWeight="SemiBold" Text="ResourceDictionary" />
+        </TextBlock>
+        <ListView
+            Grid.Row="1"
+            Margin="{StaticResource ContentMargin}"
+            ItemTemplate="{StaticResource FriendItemTemplate}"
+            ItemsSource="{x:Bind AllFriends}" />
+        <ListView
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="{StaticResource ContentMargin}"
+            ItemTemplate="{StaticResource AnotherFriendItemTemplate}"
+            ItemsSource="{x:Bind AllFriends}" />
     </Grid>
 </UserControl>
